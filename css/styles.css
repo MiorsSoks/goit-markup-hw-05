@@ -46,8 +46,8 @@ body {
 }
 /* ============ Хедер ============ */
 .header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  /* padding-top: 25px;
+  padding-bottom: 25px; */
 }
 .header-container {
   display: flex;
@@ -89,6 +89,8 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   font-weight: 700;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 .navigation .link-nav {
   color: var(--title-text-color);
@@ -96,6 +98,8 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 .navigation .link-nav:hover,
 .navigation .link-nav:focus {
@@ -103,6 +107,17 @@ body {
 }
 .navigation .link.current {
   color: var(--accent-color);
+  position: relative;
+}
+.navigation .link.current::after {
+  content: "";
+  display: block;
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: -2px;
+  border-radius: 2px;
 }
 .contact {
   color: var(--primary-text-grey-color);
@@ -110,6 +125,8 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 .contact:hover,
 .contact:focus {
@@ -122,7 +139,6 @@ body {
 
 .contact-icon {
   margin-right: 10px;
-  /* fill: var(--primary-text-grey-color); */
   fill: currentColor;
 }
 
@@ -237,6 +253,26 @@ body {
 .about-list {
   display: flex;
   justify-content: space-between;
+}
+.about-item {
+  position: relative;
+}
+.about-item-backdrop {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+.about-item-text {
+  color: var(--primary-text-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 27px;
+  margin-bottom: 27px;
 }
 /* ============ Чем мы занимаемся конец =========== */
 
